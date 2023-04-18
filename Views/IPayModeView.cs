@@ -20,7 +20,7 @@ namespace Supermarket_mvp.Views
         event EventHandler AddNewEvent;
         event EventHandler EditEvent;
         event EventHandler DeleteEvent;
-        event EventHandler SaveEevent;
+        event EventHandler SaveEvent;
         event EventHandler CancelEvent;
 
         void SetPayModeListBildingSource(BindingSource payModeList);
