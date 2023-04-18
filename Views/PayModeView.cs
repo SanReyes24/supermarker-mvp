@@ -45,7 +45,7 @@ namespace Supermarket_mvp.Views
         public string PayModeName
         {
             get { return TxtPayModeName.Text; }
-            set { TxtPayModeName.Text = value }
+            set { TxtPayModeName.Text = value; }
         }
         public string PayModeObservation
         {
@@ -79,6 +79,7 @@ namespace Supermarket_mvp.Views
         public event EventHandler DeleteEvent;
         public event EventHandler SaveEevent;
         public event EventHandler CancelEvent;
+        public event EventHandler SaveEvent;
 
         public void SetPayModeListBildingSource(BindingSource payModeList)
         {
