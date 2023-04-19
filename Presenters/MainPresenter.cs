@@ -7,6 +7,8 @@ using Supermarket_mvp.Models;
 using Supermarket_mvp.Views;
 using Supermarket_mvp._Repositories;
 
+
+
 namespace Supermarket_mvp.Presenters
 {
     internal class MainPresenter
@@ -28,6 +30,5 @@ namespace Supermarket_mvp.Presenters
             IPayModeRepository repository = new PayModeRepository(sqlConnectionString);
             new PayModePresenter(view, repository);
         }
-
     }
 }

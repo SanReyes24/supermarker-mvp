@@ -3,6 +3,7 @@ using Supermarket_mvp.Models;
 using Supermarket_mvp.Presenters;
 using Supermarket_mvp.Properties;
 using Supermarket_mvp.Views;
+using System.Configuration;
 
 namespace Supermarket_mvp
 {
@@ -19,7 +20,6 @@ namespace Supermarket_mvp
             ApplicationConfiguration.Initialize();
             string sqlConnectionString = Settings.Default.SqlConnection;
             IMainView view = new MainView();
-            IPayModeRepository repository = new PayModeRepository(sqlConnectionString);
             new MainPresenter(view, sqlConnectionString);
             Application.Run((Form) view);
         }
