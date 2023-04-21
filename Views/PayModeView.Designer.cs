@@ -339,5 +339,6 @@
         private TextBox TxtPayModeName;
         private Label label3;
         private TextBox TxtPayModeId;
+
     }
 }

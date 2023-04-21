@@ -55,3 +55,4 @@ C:\Users\Administrador\source\repos\Supermarket-mvp\bin\Debug\net7.0-windows\Zst
 C:\Users\Administrador\source\repos\Supermarket-mvp\bin\Debug\net7.0-windows\runtimes\linux\native\libmongocrypt.so
 C:\Users\Administrador\source\repos\Supermarket-mvp\bin\Debug\net7.0-windows\runtimes\osx\native\libmongocrypt.dylib
 C:\Users\Administrador\source\repos\Supermarket-mvp\bin\Debug\net7.0-windows\runtimes\win\native\mongocrypt.dll
+C:\Users\Administrador\source\repos\Supermarket-mvp\obj\Debug\net7.0-windows\Supermarket_mvp.Views.ProductView.resources

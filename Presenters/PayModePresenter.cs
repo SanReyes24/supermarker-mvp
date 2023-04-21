@@ -53,7 +53,7 @@ namespace Supermarket_mvp.Presenters
         private void SavePayMode(object? sender, EventArgs e)
         {
             var payMode = new PayModeModel();
-            payMode.Id = Convert.ToInt32(payMode.Id);
+            payMode.Id = Convert.ToInt32(view.PayModeId);
             payMode.Name = view.PayModeName;
             payMode.Observation = view.PayModeObservation;
 
