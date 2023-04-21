@@ -7,7 +7,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.Data;
 using Supermarket_mvp.Models;
 using System.Data;
-using MongoDB.Driver.Core.Configuration;
+
 
 namespace Supermarket_mvp._Repositories
 {
