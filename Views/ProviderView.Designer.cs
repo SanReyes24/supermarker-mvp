@@ -37,7 +37,10 @@
             BtnDelete = new Button();
             BtnEdit = new Button();
             BtnNew = new Button();
+            DgProvider = new DataGridView();
             BtnSearch = new Button();
+            TxtSearch = new TextBox();
+            label2 = new Label();
             tabPageProviderDetail = new TabPage();
             BtnCancel = new Button();
             BtnSave = new Button();
@@ -47,20 +50,12 @@
             TxtProviderName = new TextBox();
             label3 = new Label();
             TxtProviderId = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            DgProvider = new DataGridView();
-            button5 = new Button();
-            TxtSearch = new TextBox();
-            label2 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
             tabPageProviderList.SuspendLayout();
-            tabPageProviderDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgProvider).BeginInit();
+            tabPageProviderDetail.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -107,19 +102,14 @@
             // 
             // tabPageProviderList
             // 
-            tabPageProviderList.Controls.Add(button1);
-            tabPageProviderList.Controls.Add(button2);
-            tabPageProviderList.Controls.Add(button3);
-            tabPageProviderList.Controls.Add(button4);
-            tabPageProviderList.Controls.Add(DgProvider);
-            tabPageProviderList.Controls.Add(button5);
-            tabPageProviderList.Controls.Add(TxtSearch);
-            tabPageProviderList.Controls.Add(label2);
             tabPageProviderList.Controls.Add(BtnClose);
             tabPageProviderList.Controls.Add(BtnDelete);
             tabPageProviderList.Controls.Add(BtnEdit);
             tabPageProviderList.Controls.Add(BtnNew);
+            tabPageProviderList.Controls.Add(DgProvider);
             tabPageProviderList.Controls.Add(BtnSearch);
+            tabPageProviderList.Controls.Add(TxtSearch);
+            tabPageProviderList.Controls.Add(label2);
             tabPageProviderList.Location = new Point(4, 24);
             tabPageProviderList.Name = "tabPageProviderList";
             tabPageProviderList.Padding = new Padding(3);
@@ -132,51 +122,84 @@
             // 
             BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnClose.Image = Properties.Resources.cerrar;
-            BtnClose.Location = new Point(1174, 291);
+            BtnClose.Location = new Point(585, 288);
             BtnClose.Name = "BtnClose";
             BtnClose.Size = new Size(180, 59);
-            BtnClose.TabIndex = 23;
+            BtnClose.TabIndex = 31;
             BtnClose.UseVisualStyleBackColor = true;
             // 
             // BtnDelete
             // 
             BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnDelete.Image = Properties.Resources.delete;
-            BtnDelete.Location = new Point(1174, 217);
+            BtnDelete.Location = new Point(585, 214);
             BtnDelete.Name = "BtnDelete";
             BtnDelete.Size = new Size(180, 58);
-            BtnDelete.TabIndex = 22;
+            BtnDelete.TabIndex = 30;
             BtnDelete.UseVisualStyleBackColor = true;
             // 
             // BtnEdit
             // 
             BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnEdit.Image = Properties.Resources.edit;
-            BtnEdit.Location = new Point(1174, 144);
+            BtnEdit.Location = new Point(585, 141);
             BtnEdit.Name = "BtnEdit";
             BtnEdit.Size = new Size(180, 59);
-            BtnEdit.TabIndex = 21;
+            BtnEdit.TabIndex = 29;
             BtnEdit.UseVisualStyleBackColor = true;
             // 
             // BtnNew
             // 
             BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnNew.Image = Properties.Resources._new;
-            BtnNew.Location = new Point(1174, 73);
+            BtnNew.Location = new Point(585, 70);
             BtnNew.Name = "BtnNew";
             BtnNew.Size = new Size(180, 59);
-            BtnNew.TabIndex = 20;
+            BtnNew.TabIndex = 28;
             BtnNew.UseVisualStyleBackColor = true;
+            // 
+            // DgProvider
+            // 
+            DgProvider.AllowUserToAddRows = false;
+            DgProvider.AllowUserToDeleteRows = false;
+            DgProvider.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            DgProvider.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgProvider.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DgProvider.Location = new Point(27, 70);
+            DgProvider.Name = "DgProvider";
+            DgProvider.ReadOnly = true;
+            DgProvider.RowTemplate.Height = 25;
+            DgProvider.Size = new Size(540, 277);
+            DgProvider.TabIndex = 27;
             // 
             // BtnSearch
             // 
             BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnSearch.Image = Properties.Resources.search_small;
-            BtnSearch.Location = new Point(1112, 28);
+            BtnSearch.Location = new Point(523, 25);
             BtnSearch.Name = "BtnSearch";
             BtnSearch.Size = new Size(44, 39);
-            BtnSearch.TabIndex = 18;
+            BtnSearch.TabIndex = 26;
             BtnSearch.UseVisualStyleBackColor = true;
+            // 
+            // TxtSearch
+            // 
+            TxtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            TxtSearch.Location = new Point(27, 34);
+            TxtSearch.Name = "TxtSearch";
+            TxtSearch.PlaceholderText = "Data to search";
+            TxtSearch.Size = new Size(490, 23);
+            TxtSearch.TabIndex = 25;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(27, 16);
+            label2.Name = "label2";
+            label2.Size = new Size(96, 15);
+            label2.TabIndex = 24;
+            label2.Text = "Search Provider";
             // 
             // tabPageProviderDetail
             // 
@@ -271,89 +294,6 @@
             TxtProviderId.Text = "0";
             TxtProviderId.TextAlign = HorizontalAlignment.Right;
             // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button1.Image = Properties.Resources.cerrar;
-            button1.Location = new Point(585, 288);
-            button1.Name = "button1";
-            button1.Size = new Size(180, 59);
-            button1.TabIndex = 31;
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button2.Image = Properties.Resources.delete;
-            button2.Location = new Point(585, 214);
-            button2.Name = "button2";
-            button2.Size = new Size(180, 58);
-            button2.TabIndex = 30;
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button3.Image = Properties.Resources.edit;
-            button3.Location = new Point(585, 141);
-            button3.Name = "button3";
-            button3.Size = new Size(180, 59);
-            button3.TabIndex = 29;
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button4.Image = Properties.Resources._new;
-            button4.Location = new Point(585, 70);
-            button4.Name = "button4";
-            button4.Size = new Size(180, 59);
-            button4.TabIndex = 28;
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // DgProvider
-            // 
-            DgProvider.AllowUserToAddRows = false;
-            DgProvider.AllowUserToDeleteRows = false;
-            DgProvider.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            DgProvider.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            DgProvider.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DgProvider.Location = new Point(27, 70);
-            DgProvider.Name = "DgProvider";
-            DgProvider.ReadOnly = true;
-            DgProvider.RowTemplate.Height = 25;
-            DgProvider.Size = new Size(540, 277);
-            DgProvider.TabIndex = 27;
-            // 
-            // button5
-            // 
-            button5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button5.Image = Properties.Resources.search_small;
-            button5.Location = new Point(523, 25);
-            button5.Name = "button5";
-            button5.Size = new Size(44, 39);
-            button5.TabIndex = 26;
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // TxtSearch
-            // 
-            TxtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            TxtSearch.Location = new Point(27, 34);
-            TxtSearch.Name = "TxtSearch";
-            TxtSearch.PlaceholderText = "Data to search";
-            TxtSearch.Size = new Size(490, 23);
-            TxtSearch.TabIndex = 25;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(27, 16);
-            label2.Name = "label2";
-            label2.Size = new Size(96, 15);
-            label2.TabIndex = 24;
-            label2.Text = "Search Provider";
-            // 
             // ProviderView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -369,9 +309,9 @@
             tabControl1.ResumeLayout(false);
             tabPageProviderList.ResumeLayout(false);
             tabPageProviderList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)DgProvider).EndInit();
             tabPageProviderDetail.ResumeLayout(false);
             tabPageProviderDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)DgProvider).EndInit();
             ResumeLayout(false);
         }
 
@@ -382,11 +322,6 @@
         private Label label1;
         private TabControl tabControl1;
         private TabPage tabPageProviderList;
-        private Button BtnClose;
-        private Button BtnDelete;
-        private Button BtnEdit;
-        private Button BtnNew;
-        private Button BtnSearch;
         private TabPage tabPageProviderDetail;
         private Button BtnCancel;
         private Button BtnSave;
@@ -396,12 +331,12 @@
         private TextBox TxtProviderName;
         private Label label3;
         private TextBox TxtProviderId;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button BtnClose;
+        private Button BtnDelete;
+        private Button BtnEdit;
+        private Button BtnNew;
         private DataGridView DgProvider;
-        private Button button5;
+        private Button BtnSearch;
         private TextBox TxtSearch;
         private Label label2;
     }
