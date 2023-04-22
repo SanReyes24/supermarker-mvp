@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace Supermarket_mvp.Models
 {
-    internal class ProvidersModel
+    internal class ProviderModel
     {
         [DisplayName("Provider Id")]
         public int Id { get; set; }
