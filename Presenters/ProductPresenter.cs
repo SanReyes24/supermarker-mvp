@@ -56,6 +56,7 @@ namespace Supermarket_mvp.Presenters
             product.Id = Convert.ToInt32(view.ProductId);
             product.Name = view.ProductName;
             product.Observation = view.ProductObservation;
+            product.Price = Convert.ToInt32(view.ProductPrice);
 
             try
             {
@@ -86,6 +87,7 @@ namespace Supermarket_mvp.Presenters
             view.ProductId = "0";
             view.ProductName = "";
             view.ProductObservation = "";
+            view.ProductPrice = "0";
         }
 
         private void DeleteSelectedProduct(object? sender, EventArgs e)
@@ -113,6 +115,7 @@ namespace Supermarket_mvp.Presenters
             view.ProductId = product.Id.ToString();
             view.ProductName = product.Name;
             view.ProductObservation = product.Observation;
+            view.ProductPrice = product.Price.ToString();
 
             view.IsEdit = true;
         }

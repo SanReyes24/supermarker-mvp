@@ -24,5 +24,10 @@ namespace Supermarket_mvp.Models
         [StringLength(200, MinimumLength = 3, ErrorMessage = "Product observation must" +
             " be between 3 and 200 characters")]
         public string Observation { get; set; }
+
+        [DisplayName("Product Price")]
+        [Required(ErrorMessage = "Product price is required")]
+
+        public float Price { get; set; }
     }
 }

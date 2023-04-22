@@ -24,9 +24,10 @@ namespace Supermarket_mvp._Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO Product VALUES (@name, @observation)";
+                command.CommandText = "INSERT INTO Product VALUES (@name, @observation, @price)";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productModel.Name;
                 command.Parameters.Add("@observation", SqlDbType.NVarChar).Value = productModel.Observation;
+                command.Parameters.Add("@price", SqlDbType.Int).Value = productModel.Price;
                 command.ExecuteNonQuery();
             }
         }
@@ -54,9 +55,11 @@ namespace Supermarket_mvp._Repositories
                 command.CommandText = @"UPDATE Product
                                         SET Product_Name =@name,
                                         Product_Observation = @observation
+                                        Product_Price = @price
                                         WHERE Product_Id = @id";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productModel.Name;
                 command.Parameters.Add("@observation", SqlDbType.NVarChar).Value = productModel.Observation;
+                command.Parameters.Add("@price", SqlDbType.Int).Value = productModel.Price;
                 command.Parameters.Add("@id", SqlDbType.Int).Value = productModel.Id;
                 command.ExecuteNonQuery();
             }
@@ -79,6 +82,7 @@ namespace Supermarket_mvp._Repositories
                         productModel.Id = (int)reader["Product_Id"];
                         productModel.Name = reader["Product_Name"].ToString();
                         productModel.Observation = reader["Product_Observation"].ToString();
+                        productModel.Price = (int)reader["Product_Price"];
                         productList.Add(productModel);
                     }
                 }
@@ -109,6 +113,7 @@ namespace Supermarket_mvp._Repositories
                         productModel.Id = (int)reader["Product_Id"];
                         productModel.Name = reader["Product_Name"].ToString();
                         productModel.Observation = reader["Product_Observation"].ToString();
+                        productModel.Price = (int)reader["Product_Price"];
                         productList.Add(productModel);
                     }
                 }

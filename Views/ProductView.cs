@@ -109,6 +109,13 @@ namespace Supermarket_mvp.Views
             get { return TxtProductObservation.Text; }
             set { TxtProductObservation.Text = value; }
         }
+
+        public string ProductPrice
+        {
+            get { return TxtProductPrice.Text; }
+            set { TxtProductPrice.Text = value; }
+        }
+
         public string SearchValue
         {
             get { return TxtSearch.Text; }
@@ -131,6 +138,7 @@ namespace Supermarket_mvp.Views
         }
 
         
+
         public event EventHandler SearchEvent;
         public event EventHandler AddNewEvent;
         public event EventHandler EditEvent;
