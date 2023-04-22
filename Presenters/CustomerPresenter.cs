@@ -102,7 +102,7 @@ namespace Supermarket_mvp.Presenters
             catch (Exception ex)
             {
                 view.IsSuccesful = false;
-                view.Message = "An error ocurred, could ot delete product";
+                view.Message = "An error ocurred, could ot delete customer";
             }
         }
 

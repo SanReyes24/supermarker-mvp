@@ -76,7 +76,7 @@ namespace Supermarket_mvp._Repositories
                     {
                         var customerModel = new CustomerModel();
                         customerModel.Id = (int)reader["Customer_Id"];
-                        customerModel.Name = reader["Customere_Name"].ToString();
+                        customerModel.Name = reader["Customer_Name"].ToString();
                         customerModel.Observation = reader["Customer_Observation"].ToString();
                         customerList.Add(customerModel);
                     }

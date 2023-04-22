@@ -33,13 +33,6 @@
             label1 = new Label();
             tabControl1 = new TabControl();
             tabPageCustomerList = new TabPage();
-            tabPageCustomerDetail = new TabPage();
-            TxtCustomerObservation = new TextBox();
-            label5 = new Label();
-            label4 = new Label();
-            TxtCustomerName = new TextBox();
-            label3 = new Label();
-            TxtCustomerId = new TextBox();
             BtnClose = new Button();
             BtnDelete = new Button();
             BtnEdit = new Button();
@@ -48,12 +41,21 @@
             BtnSearch = new Button();
             TxtSearch = new TextBox();
             label2 = new Label();
+            tabPageCustomerDetail = new TabPage();
+            TxtCustomerObservation = new TextBox();
+            label5 = new Label();
+            label4 = new Label();
+            TxtCustomerName = new TextBox();
+            label3 = new Label();
+            TxtCustomerId = new TextBox();
+            BtnCancel = new Button();
+            BtnSave = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
             tabPageCustomerList.SuspendLayout();
-            tabPageCustomerDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgCustomer).BeginInit();
+            tabPageCustomerDetail.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -115,79 +117,6 @@
             tabPageCustomerList.TabIndex = 0;
             tabPageCustomerList.Text = "Customer List";
             tabPageCustomerList.UseVisualStyleBackColor = true;
-            // 
-            // tabPageCustomerDetail
-            // 
-            tabPageCustomerDetail.Controls.Add(TxtCustomerObservation);
-            tabPageCustomerDetail.Controls.Add(label5);
-            tabPageCustomerDetail.Controls.Add(label4);
-            tabPageCustomerDetail.Controls.Add(TxtCustomerName);
-            tabPageCustomerDetail.Controls.Add(label3);
-            tabPageCustomerDetail.Controls.Add(TxtCustomerId);
-            tabPageCustomerDetail.Location = new Point(4, 24);
-            tabPageCustomerDetail.Name = "tabPageCustomerDetail";
-            tabPageCustomerDetail.Padding = new Padding(3);
-            tabPageCustomerDetail.Size = new Size(792, 363);
-            tabPageCustomerDetail.TabIndex = 1;
-            tabPageCustomerDetail.Text = "Customer Detail";
-            tabPageCustomerDetail.UseVisualStyleBackColor = true;
-            // 
-            // TxtCustomerObservation
-            // 
-            TxtCustomerObservation.Location = new Point(29, 192);
-            TxtCustomerObservation.Multiline = true;
-            TxtCustomerObservation.Name = "TxtCustomerObservation";
-            TxtCustomerObservation.PlaceholderText = "Customer Observation";
-            TxtCustomerObservation.Size = new Size(278, 66);
-            TxtCustomerObservation.TabIndex = 6;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(29, 174);
-            label5.Name = "label5";
-            label5.Size = new Size(132, 15);
-            label5.TabIndex = 5;
-            label5.Text = "Customer Observation";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(29, 35);
-            label4.Name = "label4";
-            label4.Size = new Size(75, 15);
-            label4.TabIndex = 4;
-            label4.Text = "Customer Id";
-            // 
-            // TxtCustomerName
-            // 
-            TxtCustomerName.Location = new Point(29, 121);
-            TxtCustomerName.Name = "TxtCustomerName";
-            TxtCustomerName.PlaceholderText = "Customer Name";
-            TxtCustomerName.Size = new Size(278, 23);
-            TxtCustomerName.TabIndex = 3;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(29, 103);
-            label3.Name = "label3";
-            label3.Size = new Size(97, 15);
-            label3.TabIndex = 2;
-            label3.Text = "Customer Name";
-            // 
-            // TxtCustomerId
-            // 
-            TxtCustomerId.Location = new Point(29, 53);
-            TxtCustomerId.Name = "TxtCustomerId";
-            TxtCustomerId.ReadOnly = true;
-            TxtCustomerId.Size = new Size(157, 23);
-            TxtCustomerId.TabIndex = 1;
-            TxtCustomerId.Text = "0";
-            TxtCustomerId.TextAlign = HorizontalAlignment.Right;
             // 
             // BtnClose
             // 
@@ -272,6 +201,99 @@
             label2.TabIndex = 16;
             label2.Text = "Search Customer";
             // 
+            // tabPageCustomerDetail
+            // 
+            tabPageCustomerDetail.Controls.Add(BtnCancel);
+            tabPageCustomerDetail.Controls.Add(BtnSave);
+            tabPageCustomerDetail.Controls.Add(TxtCustomerObservation);
+            tabPageCustomerDetail.Controls.Add(label5);
+            tabPageCustomerDetail.Controls.Add(label4);
+            tabPageCustomerDetail.Controls.Add(TxtCustomerName);
+            tabPageCustomerDetail.Controls.Add(label3);
+            tabPageCustomerDetail.Controls.Add(TxtCustomerId);
+            tabPageCustomerDetail.Location = new Point(4, 24);
+            tabPageCustomerDetail.Name = "tabPageCustomerDetail";
+            tabPageCustomerDetail.Padding = new Padding(3);
+            tabPageCustomerDetail.Size = new Size(792, 363);
+            tabPageCustomerDetail.TabIndex = 1;
+            tabPageCustomerDetail.Text = "Customer Detail";
+            tabPageCustomerDetail.UseVisualStyleBackColor = true;
+            // 
+            // TxtCustomerObservation
+            // 
+            TxtCustomerObservation.Location = new Point(29, 192);
+            TxtCustomerObservation.Multiline = true;
+            TxtCustomerObservation.Name = "TxtCustomerObservation";
+            TxtCustomerObservation.PlaceholderText = "Customer Observation";
+            TxtCustomerObservation.Size = new Size(278, 66);
+            TxtCustomerObservation.TabIndex = 6;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(29, 174);
+            label5.Name = "label5";
+            label5.Size = new Size(132, 15);
+            label5.TabIndex = 5;
+            label5.Text = "Customer Observation";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(29, 35);
+            label4.Name = "label4";
+            label4.Size = new Size(75, 15);
+            label4.TabIndex = 4;
+            label4.Text = "Customer Id";
+            // 
+            // TxtCustomerName
+            // 
+            TxtCustomerName.Location = new Point(29, 121);
+            TxtCustomerName.Name = "TxtCustomerName";
+            TxtCustomerName.PlaceholderText = "Customer Name";
+            TxtCustomerName.Size = new Size(278, 23);
+            TxtCustomerName.TabIndex = 3;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(29, 103);
+            label3.Name = "label3";
+            label3.Size = new Size(97, 15);
+            label3.TabIndex = 2;
+            label3.Text = "Customer Name";
+            // 
+            // TxtCustomerId
+            // 
+            TxtCustomerId.Location = new Point(29, 53);
+            TxtCustomerId.Name = "TxtCustomerId";
+            TxtCustomerId.ReadOnly = true;
+            TxtCustomerId.Size = new Size(157, 23);
+            TxtCustomerId.TabIndex = 1;
+            TxtCustomerId.Text = "0";
+            TxtCustomerId.TextAlign = HorizontalAlignment.Right;
+            // 
+            // BtnCancel
+            // 
+            BtnCancel.Image = Properties.Resources.cancel;
+            BtnCancel.Location = new Point(137, 278);
+            BtnCancel.Name = "BtnCancel";
+            BtnCancel.Size = new Size(88, 41);
+            BtnCancel.TabIndex = 10;
+            BtnCancel.UseVisualStyleBackColor = true;
+            // 
+            // BtnSave
+            // 
+            BtnSave.Image = Properties.Resources.save;
+            BtnSave.Location = new Point(29, 278);
+            BtnSave.Name = "BtnSave";
+            BtnSave.Size = new Size(88, 41);
+            BtnSave.TabIndex = 9;
+            BtnSave.UseVisualStyleBackColor = true;
+            // 
             // CustomerView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -287,9 +309,9 @@
             tabControl1.ResumeLayout(false);
             tabPageCustomerList.ResumeLayout(false);
             tabPageCustomerList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)DgCustomer).EndInit();
             tabPageCustomerDetail.ResumeLayout(false);
             tabPageCustomerDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)DgCustomer).EndInit();
             ResumeLayout(false);
         }
 
@@ -315,5 +337,7 @@
         private Button BtnSearch;
         private TextBox TxtSearch;
         private Label label2;
+        private Button BtnCancel;
+        private Button BtnSave;
     }
 }
