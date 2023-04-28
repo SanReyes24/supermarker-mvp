@@ -28,6 +28,6 @@ namespace Supermarket_mvp.Models
         [DisplayName("Product Price")]
         [Required(ErrorMessage = "Product price is required")]
 
-        public float Price { get; set; }
+        public int Price { get; set; }
     }
 }

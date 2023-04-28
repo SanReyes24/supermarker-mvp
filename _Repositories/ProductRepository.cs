@@ -27,7 +27,7 @@ namespace Supermarket_mvp._Repositories
                 command.CommandText = "INSERT INTO Product VALUES (@name, @observation, @price)";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productModel.Name;
                 command.Parameters.Add("@observation", SqlDbType.NVarChar).Value = productModel.Observation;
-                command.Parameters.Add("@price", SqlDbType.Int).Value = productModel.Price;
+                command.Parameters.Add("@price", SqlDbType.NVarChar).Value = productModel.Price;
                 command.ExecuteNonQuery();
             }
         }
@@ -59,7 +59,7 @@ namespace Supermarket_mvp._Repositories
                                         WHERE Product_Id = @id";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productModel.Name;
                 command.Parameters.Add("@observation", SqlDbType.NVarChar).Value = productModel.Observation;
-                command.Parameters.Add("@price", SqlDbType.Int).Value = productModel.Price;
+                command.Parameters.Add("@price", SqlDbType.NVarChar).Value = productModel.Price;
                 command.Parameters.Add("@id", SqlDbType.Int).Value = productModel.Id;
                 command.ExecuteNonQuery();
             }

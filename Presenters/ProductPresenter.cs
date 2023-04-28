@@ -56,8 +56,7 @@ namespace Supermarket_mvp.Presenters
             product.Id = Convert.ToInt32(view.ProductId);
             product.Name = view.ProductName;
             product.Observation = view.ProductObservation;
-            product.Price = Convert.ToInt32(view.ProductPrice);
-
+            product.Price = int.Parse(view.ProductPrice);
             try
             {
                 new Common.ModelDataValidation().Validate(product);
@@ -87,7 +86,7 @@ namespace Supermarket_mvp.Presenters
             view.ProductId = "0";
             view.ProductName = "";
             view.ProductObservation = "";
-            view.ProductPrice = "0";
+            view.ProductPrice = "";
         }
 
         private void DeleteSelectedProduct(object? sender, EventArgs e)
@@ -116,7 +115,6 @@ namespace Supermarket_mvp.Presenters
             view.ProductName = product.Name;
             view.ProductObservation = product.Observation;
             view.ProductPrice = product.Price.ToString();
-
             view.IsEdit = true;
         }
 
