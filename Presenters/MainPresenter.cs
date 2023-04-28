@@ -8,7 +8,6 @@ using Supermarket_mvp.Views;
 using Supermarket_mvp._Repositories;
 
 
-
 namespace Supermarket_mvp.Presenters
 {
     internal class MainPresenter
@@ -26,6 +25,14 @@ namespace Supermarket_mvp.Presenters
             this.mainView.ShowCustomerView += ShowCustomerView;
             this.mainView.ShowProviderView += ShowProviderView;
             this.mainView.ShowCategorieView += ShowCategorieView;
+            this.mainView.ShowSellView += ShowSellView;
+        }
+
+        private void ShowSellView(object? sender, EventArgs e)
+        {
+            ISellView view = SellView.GetInstance((MainView)mainView);
+            ISellModelRepository repository = new SellRepository(sqlConnectionString);
+            new SellPresenter(view, repository);
         }
 
         private void ShowPayModeView(object? sender, EventArgs e)

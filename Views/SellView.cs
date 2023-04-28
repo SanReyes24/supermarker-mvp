@@ -145,6 +145,9 @@ namespace Supermarket_mvp.Views
             }
             set { txtSellCustomerId.Text = value; }
 
+
+            /*get { return txtSellCustomerId.Text; }
+            set { txtSellCustomerId.Text = value;}*/
         }
         public string Sell_Total
         {
@@ -157,7 +160,8 @@ namespace Supermarket_mvp.Views
                 return "";
             }
             set { txtSellTotal.Text = value; }
-    
+            /*get { return txtSellTotal.Text; }
+            set { txtSellTotal.Text = value;}*/
         }
         public string Sell_PayMode
         {
@@ -230,6 +234,22 @@ namespace Supermarket_mvp.Views
                 instance.BringToFront();
             }
             return instance;
+
+        }
+
+        private void DgSellCustomers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void DgSellProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+        }
+
+        private void DgSellProducts_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
