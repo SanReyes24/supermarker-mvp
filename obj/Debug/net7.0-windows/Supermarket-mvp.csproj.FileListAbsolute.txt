@@ -59,3 +59,4 @@ C:\Users\Administrador\source\repos\Supermarket-mvp\obj\Debug\net7.0-windows\Sup
 C:\Users\Administrador\source\repos\Supermarket-mvp\obj\Debug\net7.0-windows\Supermarket_mvp.Views.CustomerView.resources
 C:\Users\Administrador\source\repos\Supermarket-mvp\obj\Debug\net7.0-windows\Supermarket_mvp.Views.ProviderView.resources
 C:\Users\Administrador\source\repos\Supermarket-mvp\obj\Debug\net7.0-windows\Supermarket_mvp.Views.CategorieView.resources
+C:\Users\Administrador\source\repos\Supermarket-mvp\obj\Debug\net7.0-windows\Supermarket_mvp.Views.SellView.resources

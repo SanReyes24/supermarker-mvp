@@ -19,5 +19,8 @@
     <Compile Update="Views\ProviderView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\SellView.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
